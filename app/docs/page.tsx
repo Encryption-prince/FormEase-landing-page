@@ -6,16 +6,15 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 
 export default function DocsPage() {
-  const fadeInUp = {
-    initial: { y: 20, opacity: 0 },
-    animate: { y: 0, opacity: 1 },
-    transition: { duration: 0.6, ease: "easeOut" }
-  };
-
   return (
     <main className="flex flex-col min-h-dvh">
       <div className="flex-1 px-4 py-12 max-w-4xl mx-auto">
-        <motion.div {...fadeInUp} className="mb-12 text-center">
+        <motion.div 
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="mb-12 text-center"
+        >
           <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
             Extension Documentation
           </h1>
@@ -25,7 +24,11 @@ export default function DocsPage() {
         </motion.div>
 
         {/* Features Section */}
-        <motion.div {...fadeInUp} transition={{ delay: 0.1 }}>
+        <motion.div 
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.1 }}
+        >
           <Card className="mb-8">
             <CardHeader>
               <CardTitle className="text-2xl">Features</CardTitle>
@@ -91,7 +94,11 @@ export default function DocsPage() {
         </motion.div>
 
         {/* Installation Section */}
-        <motion.div {...fadeInUp} transition={{ delay: 0.2 }}>
+        <motion.div 
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+        >
           <Card className="mb-8">
             <CardHeader>
               <CardTitle className="text-2xl">Installation</CardTitle>
@@ -110,7 +117,11 @@ export default function DocsPage() {
         </motion.div>
 
         {/* Usage Section */}
-        <motion.div {...fadeInUp} transition={{ delay: 0.3 }}>
+        <motion.div 
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.3 }}
+        >
           <Card className="mb-8">
             <CardHeader>
               <CardTitle className="text-2xl">Usage</CardTitle>
@@ -188,7 +199,11 @@ zipCode: 12345`}</code></pre>
         </motion.div>
 
         {/* Supported Field Types */}
-        <motion.div {...fadeInUp} transition={{ delay: 0.4 }}>
+        <motion.div 
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+        >
           <Card className="mb-8">
             <CardHeader>
               <CardTitle className="text-2xl">Supported Field Types</CardTitle>
@@ -234,7 +249,11 @@ zipCode: 12345`}</code></pre>
         </motion.div>
 
         {/* Customizing Field Mappings */}
-        <motion.div {...fadeInUp} transition={{ delay: 0.5 }}>
+        <motion.div 
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 }}
+        >
           <Card className="mb-8">
             <CardHeader>
               <CardTitle className="text-2xl">Customizing Field Mappings</CardTitle>
@@ -263,7 +282,11 @@ zipCode: 12345`}</code></pre>
         </motion.div>
 
         {/* Privacy & Security */}
-        <motion.div {...fadeInUp} transition={{ delay: 0.6 }}>
+        <motion.div 
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
+        >
           <Card className="mb-8">
             <CardHeader>
               <CardTitle className="text-2xl">Privacy & Security</CardTitle>
@@ -315,7 +338,11 @@ zipCode: 12345`}</code></pre>
         </motion.div>
 
         {/* Browser Compatibility */}
-        <motion.div {...fadeInUp} transition={{ delay: 0.7 }}>
+        <motion.div 
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.7 }}
+        >
           <Card className="mb-8">
             <CardHeader>
               <CardTitle className="text-2xl">Browser Compatibility</CardTitle>
@@ -332,7 +359,11 @@ zipCode: 12345`}</code></pre>
         </motion.div>
 
         {/* Troubleshooting */}
-        <motion.div {...fadeInUp} transition={{ delay: 0.8 }}>
+        <motion.div 
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
+        >
           <Card className="mb-8">
             <CardHeader>
               <CardTitle className="text-2xl">Troubleshooting</CardTitle>
@@ -372,7 +403,12 @@ zipCode: 12345`}</code></pre>
         </motion.div>
 
         {/* Back to Home */}
-        <motion.div {...fadeInUp} transition={{ delay: 0.9 }} className="text-center">
+        <motion.div 
+          initial={{ y: 20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut", delay: 0.9 }}
+          className="text-center"
+        >
           <Button asChild size="lg">
             <Link href="/">
               ← Back to Home

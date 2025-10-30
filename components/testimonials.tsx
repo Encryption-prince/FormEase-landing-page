@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 
 interface Review {
   name: string;
@@ -9,12 +9,20 @@ interface Review {
   timestamp: string;
 }
 
+interface Testimonial {
+  name: string;
+  role: string;
+  avatar: string;
+  content: string;
+  rating: number;
+}
+
 export default function Testimonials() {
-  const [reviews, setReviews] = useState<Review[]>([]);
+  const [reviews, setReviews] = useState<Testimonial[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   // Fallback testimonials in case Google Sheets is not configured or fails
-  const fallbackTestimonials = [
+  const fallbackTestimonials = useMemo(() => [
     {
       name: "Sarah Chen",
       role: "CEO at TechStart",
@@ -95,7 +103,7 @@ export default function Testimonials() {
         "Real-time collaboration features have transformed how our remote team works together. Productivity has increased dramatically.",
       rating: 5,
     },
-  ];
+  ], []);
 
   useEffect(() => {
     const fetchReviews = async () => {
@@ -133,7 +141,7 @@ export default function Testimonials() {
                 setReviews(formattedMockReviews);
                 return;
               }
-            } catch (mockError) {
+            } catch {
               console.log('Mock API also failed, using fallback testimonials');
             }
           }
@@ -148,7 +156,7 @@ export default function Testimonials() {
     };
 
     fetchReviews();
-  }, []); // Empty dependency array to run only once
+  }, [fallbackTestimonials]); // Include fallbackTestimonials in dependency array
 
   const testimonials = reviews.length > 0 ? reviews : fallbackTestimonials;
 

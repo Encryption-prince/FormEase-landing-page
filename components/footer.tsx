@@ -55,7 +55,7 @@ const Footer = () => {
       } else {
         setSubmitMessage('Failed to submit review. Please try again.');
       }
-    } catch (error) {
+    } catch {
       setSubmitMessage('Failed to submit review. Please try again.');
     } finally {
       setIsSubmitting(false);
