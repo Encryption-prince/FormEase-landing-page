@@ -11,7 +11,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.1.13-38B2AC?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
 [![Framer Motion](https://img.shields.io/badge/Framer%20Motion-12.23.13-ff69b4?style=flat-square&logo=framer)](https://www.framer.com/motion/)
 
-[🌐 Live Demo](https://formease-landing.vercel.app) • [📖 Documentation](#-documentation)
+[🌐 Live Demo](https://form-ease-landing-page-1xjs.vercel.app/) • [📖 Documentation](https://form-ease-landing-page-1xjs.vercel.app/docs)
 
 </div>
 
