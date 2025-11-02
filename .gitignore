@@ -207,6 +207,7 @@ temp/
 google-credentials.json
 service-account-key.json
 credentials.json
+formease-476608-729f3b41b993.json
 
 # Test files (if you don't want to commit them)
 test-sheets.js
